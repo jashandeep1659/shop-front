@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+$secondary-color: whitesmoke;
+$highlighted-color: #0b5ac2;
+$highlighted-color-hover: #0a3f85;
+#Navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background-color: whitesmoke;
+    align-items: center;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    .cart {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        div {
+            position: relative;
+            i {
+                font-size: 24px;
+            }
+            span {
+                position: absolute;
+                top: -5px;
+                right: -3px;
+                background-color: red;
+                border-radius: 50%;
+                padding: 1px 3px;
+                font-size: 10px;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+        font-weight: 700;
+        font-size: 22px;
+    }
+    div.urls {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    ul.urls {
+        list-style: none;
+        li.urls a.urls {
+            text-decoration: none;
+            margin: 0 10px;
+            box-icon {
+                font-size: 10px;
+            }
+        }
+        .dropdown {
+            width: auto;
+            margin: 0 10px;
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            cursor: pointer;
+            &:hover {
+                .dropdown-menu {
+                    display: block;
+                }
+            }
+            i {
+                font-size: 12px;
+            }
+            .dropdown-menu {
+                position: absolute;
+                background-color: white;
+                border: 1px solid gray;
+                display: none;
+                width: 300%;
+                left: 50%;
+                transform: translateX(-50%);
+                ul {
+                    list-style: none;
+                    padding: 5px;
+                    li {
+                        margin: 0;
+                        a {
+                            margin: 0;
+                            text-decoration: none;
+                            font-size: 13px;
+                            &:hover {
+                                border-bottom: 1px solid gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#HomePage {
+    .top-banner {
+        background-color: whitesmoke;
+        border-bottom-right-radius: 200px;
+        .text,
+        .image {
+            width: 100%;
+        }
+        .text button {
+            background-color: #0b5ac2;
+            transition: 0.3s all;
+            &:hover {
+                background-color: $highlighted-color-hover;
+            }
+        }
+    }
+}
+
+#ProductCard {
+    background-color: white;
+    transition: 0.3s all;
+    &:hover {
+        background-color: $secondary-color;
+        box-shadow: none;
+    }
+}
+.newletter {
+    background-color: $secondary-color;
+    border: none;
+    input {
+        min-width: 50%;
+        &:focus {
+            outline: none;
+        }
+    }
+    button {
+        background-color: $highlighted-color;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+        &:hover {
+            background-color: $highlighted-color-hover;
+        }
+    }
+}
+#ProductPage {
+    .add-to-cart {
+        padding: 10px 5%;
+        background-color: $highlighted-color;
+        color: white;
+        font-weight: bolder;
+        border-radius: 10px;
+        &:hover {
+            background-color: $highlighted-color-hover;
+        }
+    }
+    .cart-functions {
+        select {
+            border: 1px solid $highlighted-color;
+            padding: 0px 15px;
+            border-radius: 5px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+#Cart {
+    div.cart {
+        .cart-item {
+            background-color: whitesmoke;
+            margin: 20px 0;
+        }
+    }
+}
+#Mobile-Navbars {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    .links {
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+    }
+    .black {
+        background-color: black;
+        opacity: 0.5;
+        height: 100vh;
+        z-index: 2;
+        width: 100%;
+        position: absolute;
+    }
+    #Mobile-Navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: whitesmoke;
+        padding: 15px 5%;
+    }
+    .cart {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        div {
+            position: relative;
+            i {
+                font-size: 24px;
+            }
+            span {
+                position: absolute;
+                top: -5px;
+                right: -3px;
+                background-color: red;
+                border-radius: 50%;
+                padding: 1px 3px;
+                font-size: 10px;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
+    .urls {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        i {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+    }
+}
+#footer {
+    background-color: whitesmoke;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px 5%;
+    position: absolute;
+    // bottom: 100%;
+    display: none;
+
+    > * {
+        width: 100%;
+    }
+}
